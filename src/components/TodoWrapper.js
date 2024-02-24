@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Todo } from "./Todo";
 import { v4 as uuidv4 } from "uuid";
-import { Link } from "react-router-dom";
 
 export const TodoWrapper = ({ todos, setTodos }) => {
   const [word, setWord] = useState('');
@@ -55,7 +54,7 @@ export const TodoWrapper = ({ todos, setTodos }) => {
             value={word}
             onChange={handleWordChange}
             onKeyDown={handleKeyDown} // handleKeyDown 적용
-            placeholder="영단어 입력"
+            placeholder="단어 입력"
             lang="en"
           />
           <input
@@ -69,7 +68,7 @@ export const TodoWrapper = ({ todos, setTodos }) => {
             lang="ko"
           />
         </div>
-        <button className='todo-btn' onClick={saveWordAndMeaning}>단어 저장</button>
+        <button className='todo-btn' onClick={saveWordAndMeaning}>추가</button>
       </div>
 
       <Todo
@@ -84,7 +83,6 @@ export const TodoWrapper = ({ todos, setTodos }) => {
         <button className='problem-btn' onClick={generateMeaningQuiz}>뜻 퀴즈 출제</button>
       </div>
       */}
-      <Link to="/test">asdf</Link>
     </div>
   );
 };
