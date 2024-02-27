@@ -29,6 +29,7 @@ export const TodoWrapper = ({ todos, setTodos }) => {
       ...todos,
       { id: uuidv4(), task: todo, completed: false, isEditing: false },
     ]);
+    console.log(todos);
   }
 
   const handleKeyDown = (e) => {

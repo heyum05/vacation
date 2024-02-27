@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import { TodoWrapper } from './components/TodoWrapper';
 import { Memorized } from "./components/Memorized";
 import { English } from "./components/English";
 import { Korean } from "./components/Korean";
+
+
+import { shuffleArray } from "./components/util";
 import './App.css';
 
 function App() {
-  const [todos, setTodos] = useState([]);
-  const [generateQuiz, generateMeaningQuiz] = useState();
+  const [todos, setTodos] = useState(() => JSON.parse(window.localStorage.getItem("todos")) || []);
+
+  useEffect(() => {
+    window.localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <BrowserRouter>
@@ -43,13 +49,11 @@ function App() {
         />} />
 
         <Route path="/english" element={<English
-          todos={todos}
-          setTodos={setTodos}
+          todos={shuffleArray(todos)}
         />} />
 
         <Route path="/korean" element={<Korean
-          todos={todos}
-          setTodos={setTodos}
+          todos={shuffleArray(todos)}
         />} />
 
         <Route path="test" element={
