@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  flex-grow: 0;
 }
 
 .navbtn{
@@ -44,7 +45,6 @@ h1 {
 .TodoWrapper {
   color: #fff;
   background: #1A1A40;
-  margin-top: 0.5rem;
   padding: 2rem;
   border-radius: 5px;
 }
@@ -131,4 +131,23 @@ align-items: center;
 font-size: 30px;
 margin-top: 40px;
 margin-bottom: 0px;
+}
+
+.quiz{
+  outline: none;
+  background: none;
+  border: 1px solid #8758ff;
+  padding: 0.5rem 1rem;
+  margin-top: 10px;
+  margin-right: 0.25rem;
+  width: 300px;
+  color: #fff;
+}
+
+.quiz-btn{
+  background: #8758ff;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
 }

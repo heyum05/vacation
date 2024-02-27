@@ -10,7 +10,7 @@ export const Modal = (props) => {
         setIsOpen(false);
     }
 
-    return(
+    return (
         <div>
             <button onClick={setModalOpen} className=''>
                 asdf

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 export const EditTodoForm = ({ editTodo, task }) => {
   const [word, setWord] = useState(task.task.word);

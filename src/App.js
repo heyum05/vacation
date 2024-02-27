@@ -4,8 +4,6 @@ import { TodoWrapper } from './components/TodoWrapper';
 import { Memorized } from "./components/Memorized";
 import { English } from "./components/English";
 import { Korean } from "./components/Korean";
-
-
 import { shuffleArray } from "./components/util";
 import './App.css';
 

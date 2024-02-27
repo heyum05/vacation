@@ -12,7 +12,7 @@ export const Korean = ({ todos }) => {
     return todos[idx].task.word;
   }
 
-  const Answer = "뜻이 위와 같은 단어는?";
+  const Answer = "다음 뜻을 가진 단어는?";
   return Problem({ todos, getAnswer, getProblem, Answer, idx, setIdx });
 }
 

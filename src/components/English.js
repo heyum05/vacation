@@ -11,7 +11,7 @@ export const English = ({ todos }) => {
   const getAnswer = () => {
     return todos[idx].task.meaning;
   }
-  const Answer = "이라는 뜻을 가진 영단어는?";
+  const Answer = "위 단어의 뜻은?";
   return Problem({ todos, getAnswer, getProblem, Answer, idx, setIdx });
 }
 
