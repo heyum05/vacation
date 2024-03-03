@@ -43,13 +43,16 @@ h1 {
 }
 
 .TodoWrapper {
+  margin-top: 2rem;
   color: #fff;
   background: #1A1A40;
-  padding: 2rem;
   border-radius: 5px;
+  width: 650px;
 }
 
 .TodoForm {
+  margin-top: 1rem;
+  width: 650px;
   display: flex;
   flex-direction: row;
   margin-bottom: 5rem;
@@ -61,7 +64,7 @@ h1 {
   border: 1px solid #8758ff;
   padding: 0.5rem 1rem;
   margin-right: 0.25rem;
-  width: 300px;
+  width: 280px;
   color: #fff;
 }
 
@@ -73,7 +76,7 @@ h1 {
   background: #8758ff;
   color: #fff;
   border: none;
-  padding: 0.55rem;
+  flex-grow: 1;
   cursor: pointer;
 }
 
@@ -139,9 +142,8 @@ margin-bottom: 0px;
   background: none;
   border: 1px solid #8758ff;
   padding: 0.5rem 1rem;
-  margin-top: 10px;
   margin-right: 0.25rem;
-  width: 600px;
+  width: 560px;
   color: #fff;
 }
 
@@ -149,6 +151,38 @@ margin-bottom: 0px;
   background: #8758ff;
   color: #fff;
   border: none;
-  padding: 0.55rem;
+  flex-grow: 1;
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .todo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todo-input {
+    margin-bottom: 10px;
+  }
+
+  .todo-btn {
+    width: 100%;
+  }
+
+  .problem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .problem-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .TodoWrapper {
+    padding: 0rem;
+  }
 }

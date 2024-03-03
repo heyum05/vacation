@@ -4,7 +4,7 @@ import { TodoWrapper } from './components/TodoWrapper';
 import { Memorized } from "./components/Memorized";
 import { English } from "./components/English";
 import { Korean } from "./components/Korean";
-import { shuffleArray } from "./components/util";
+import { shuffleArray, removeArray } from "./components/util";
 import './App.css';
 
 function App() {
@@ -47,11 +47,11 @@ function App() {
         />} />
 
         <Route path="/english" element={<English
-          todos={shuffleArray(todos)}
+          todos={shuffleArray(removeArray(todos))}
         />} />
 
         <Route path="/korean" element={<Korean
-          todos={shuffleArray(todos)}
+          todos={shuffleArray(removeArray(todos))}
         />} />
 
         <Route path="test" element={

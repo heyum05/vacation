@@ -77,13 +77,6 @@ export const TodoWrapper = ({ todos, setTodos }) => {
         setTodos={setTodos}
         isCompleted={false}
       />
-
-      {/*
-      <div className='problem'>
-        <button className='problem-btn' onClick={generateQuiz}>영단어 퀴즈 출제</button>
-        <button className='problem-btn' onClick={generateMeaningQuiz}>뜻 퀴즈 출제</button>
-      </div>
-      */}
     </div>
   );
 };

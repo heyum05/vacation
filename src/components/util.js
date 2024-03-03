@@ -7,5 +7,14 @@ const shuffleArray = (array) => {
     return array;
 };
 
+const removeArray = (array) => {
+    let ret = []
+    array.map((i) => {
+        if(i.completed === false){
+            ret.push(i);
+        } 
+    })
+    return ret;
+}
 
-export { shuffleArray };
+export { shuffleArray, removeArray };

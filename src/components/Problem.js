@@ -7,7 +7,7 @@ export const Problem = ({ todos, getAnswer, getProblem, Answer, idx, setIdx }) =
     setField(e.target.value);
   }
 
-  const handleKeyPress = (e) => {
+  const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       checkAnswer();
     }
@@ -33,15 +33,17 @@ export const Problem = ({ todos, getAnswer, getProblem, Answer, idx, setIdx }) =
         <h1>{idx + 1}번째 문제 : {getProblem()}</h1>
         <br></br>
         <h3>{Answer}</h3>
-        <input 
-          type="text" 
-          id="submit" 
-          value={field} 
-          onChange={handleField} 
-          onKeyPress={handleKeyPress} 
-          className="quiz"
-        />
-        <button onClick={checkAnswer} className="quiz-btn">채점하기</button>
+        <div className="TodoForm">
+          <input
+            type="text"
+            id="submit"
+            value={field}
+            onChange={handleField}
+            onKeyDown={handleKeyDown}
+            className="quiz"
+          />
+          <button onClick={checkAnswer} className="quiz-btn">채점하기</button>
+        </div>
       </div>
     );
   } else if (todos.length === 0) {
